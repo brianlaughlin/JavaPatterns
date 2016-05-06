@@ -10,16 +10,18 @@ package factory.alvinalexander.com;
  * @author Brian
  */
 public class DogFactory {
-    public static Dog getDog(String criteria){
-        if(criteria.equalsIgnoreCase("small"))
+
+    public static Dog getDog(String criteria) {
+        if (criteria.equalsIgnoreCase("small")) {
             return new Poodle();
-        else if(criteria.equals("big"))
+        } else if (criteria.equals("big")) {
             return new Rottweiler();
-        else if(criteria.equals("cute"))
+        } else if (criteria.equals("cute")) {
             return new Shipo();
-        
+        }
+
         return null;
-        
+
     }
-    
+
 }
