@@ -6,12 +6,7 @@
 package obseerver.headfirst.com;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -41,8 +36,8 @@ public class ButtonExample {
         button = new JButton("click me");
         theFrame.getContentPane().add(button);
         
-        button.addActionListener((ActionListener) new AngelListner());
-        button.addActionListener((ActionListener) new DevilListner());
+        button.addActionListener(new AngelListner());
+        button.addActionListener(new DevilListner());
         
         
         theFrame.setVisible(true);

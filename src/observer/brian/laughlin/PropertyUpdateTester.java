@@ -15,6 +15,7 @@ public class PropertyUpdateTester {
         Agent agent = new Agent();
         Buyer buyer = new Buyer();
         Website site = new Website();
+        NosyNeighbor nosyNeighbor = new NosyNeighbor("Jane Gossip");
         
         Property property = new Property("777 Christian Lane");
         
@@ -22,6 +23,7 @@ public class PropertyUpdateTester {
         property.observers.add(site);
         property.observers.add(buyer);
         property.observers.add(agent);
+        property.observers.add(nosyNeighbor);
         
         //update
         property.notifyObserver();
