@@ -4,21 +4,23 @@ package strategy.replaceconditonals;
 // The reference to this is from here:
 // https://www.jetbrains.com/help/idea/replace-conditional-logic-with-strategy-pattern.html
 public class IfElseDemo {
-    private InsuranceStrategyVeryHigh strategy;
+    private InsuranceStrategy strategy;
 
 
     public double calculateInsurance(double income) {
         if (income <= 10000) {
-            return income * 0.365;
+            strategy = new InsuranceStrategyLow();
+            return strategy.calculate(income);
         } else if (income <= 30000) {
-            return (income - 10000) * 0.2 + 35600;
-        } else if (income <= strategy.getAdjustment()) {
-            return (income - 30000) * 0.1 + 76500;
+            strategy = new InsuranceStrategyMedium();
+            return strategy.calculate(income);
+        } else if (income <= 60000) {
+            strategy = new InsuranceStrategyHigh();
+            return strategy.calculate(income);
         } else {
             strategy = new InsuranceStrategyVeryHigh();
-            return strategy.calculateInsuranceVeryHigh(income);
+            return strategy.calculate(income);
         }
-
     }
 
 

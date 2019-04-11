@@ -22,7 +22,7 @@ public class IfElseDemoTest {
 
     @Test
     public void veryHigh() {
-        assertEquals(106400, insuranceFor(100_000), 0.01);
+        assertEquals(106400, insuranceFor(100000), 0.01);
     }
 
     private double insuranceFor(double income) {

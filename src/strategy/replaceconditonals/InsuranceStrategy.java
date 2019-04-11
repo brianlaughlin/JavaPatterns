@@ -1,7 +1,7 @@
 package strategy.replaceconditonals;
 
 public abstract class InsuranceStrategy {
-    double calculateInsuranceVeryHigh(double income) {
+    double calculate(double income) {
         return (income - getAdjustment()) * getWeight() + getConstant();
     }
 
